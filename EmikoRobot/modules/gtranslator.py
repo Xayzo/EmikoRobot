@@ -42,7 +42,7 @@ __mod_name__ = "Translator"
 trans = Translator()
 
 
-@pbot.on_message(filters.command(["tl", "tr"]))
+@pbot.on_message(filters.command(["tl", "tr", "translate"]))
 async def translate(_, message: Message) -> None:
     reply_msg = message.reply_to_message
     if not reply_msg:
