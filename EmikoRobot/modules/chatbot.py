@@ -6,7 +6,7 @@ import aiohttp
 from googletrans import Translator as google_translator
 from pyrogram import filters
 from aiohttp import ClientSession
-from EmikoRobot import BOT_USERNAME as bu
+from EmikoRobot import BOT_USERNAME as peler
 from EmikoRobot import BOT_ID, pbot, arq
 from EmikoRobot.ex_plugins.chatbot import add_chat, get_session, remove_chat
 from EmikoRobot.utils.pluginhelper import admins_only, edit_or_reply
@@ -44,7 +44,7 @@ ewe_chats = []
 en_chats = []
 
 
-@pbot.on_message(filters.command(["chatbot", f"chatbot@{bu}"]) & ~filters.edited & ~filters.bot & ~filters.private)
+@pbot.on_message(filters.command(["chattingbot", f"chattingbot@{peler}"]) & ~filters.edited & ~filters.bot & ~filters.private)
 @admins_only
 async def hmm(_, message):
     global ewe_chats
@@ -57,17 +57,17 @@ async def hmm(_, message):
         lel = await edit_or_reply(message, "`Processing...`")
         lol = add_chat(int(message.chat.id))
         if not lol:
-            await lel.edit("Emiko AI Already Activated In This Chat")
+            await lel.edit("Dion AI Already Activated In This Chat")
             return
-        await lel.edit(f"Emiko AI Actived by {message.from_user.mention()} for users in {message.chat.title}")
+        await lel.edit(f"Dion AI Actived by {message.from_user.mention()} for users in {message.chat.title}")
 
     elif status == "OFF" or status == "off" or status == "Off":
         lel = await edit_or_reply(message, "`Processing...`")
         Escobar = remove_chat(int(message.chat.id))
         if not Escobar:
-            await lel.edit("Emiko AI Was Not Activated In This Chat")
+            await lel.edit("Dion AI Was Not Activated In This Chat")
             return
-        await lel.edit(f"Emiko AI Deactivated by {message.from_user.mention()} for users in {message.chat.title}")
+        await lel.edit(f"Dion AI Deactivated by {message.from_user.mention()} for users in {message.chat.title}")
 
     elif status == "EN" or status == "en" or status == "english":
         if not chat_id in en_chats:
