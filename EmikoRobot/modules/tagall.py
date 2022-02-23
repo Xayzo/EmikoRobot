@@ -117,6 +117,6 @@ Dion Can Be a Mention Bot for your group.
 
 Only admins can tag all.  here is a list of commands
 
-❂ /tagall or all or @all (reply to message or add another message) To mention all members in your group, without exception.
+❂ /tagall or /all or @all (reply to message or add another message) To mention all members in your group, without exception.
 ❂ /cancelmention for canceling the mention-all.
 """
